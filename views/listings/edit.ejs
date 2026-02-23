@@ -1,0 +1,50 @@
+<%-layout("/layouts/nav.ejs")%>
+<body>
+   
+    <div class="row mt-3">
+         <h2 class="offset-2 mb-3" >Edit</h2>
+        <div class="col-8 offset-2">
+
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" enctype="multipart/form-data" >
+
+
+        <div class="mb-3"><label for="title">Enter your title</label>
+        <input name="title" placeholder="enter your title" class="form-control" value="<%=listing.title%>">
+        </div>
+
+
+        <div class="mb-3">
+        <img src="<%=orignalImageUrl%>"> 
+        </div>
+
+        <div class="mb-3">
+        <label for="image" >paste image url</label>
+        <input name="image" placeholder="enter image url" class="form-control" type="file" value="<%=listing.image.url%>">
+        </div>
+        
+        
+        
+        <div class="mb-3">
+        <label for="location">location</label>
+        <input name="location" placeholder="enter location" class="form-control" value="<%=listing.location%>">
+        </div>
+        <div class="row">
+         <div class="mb-3 col-md-4">
+        <label for="price">Price</label>
+        <input name="price" placeholder="enter price for per night" class="form-control" type="number" value="<%=listing.price%>" >
+        </div>
+        <div class="mb-3 col-md-8">
+        <label for="contry">contry</label>
+        <input name="country" placeholder="enter place country" class="form-control" value="<%=listing.country%>">
+        </div>
+        </div>
+        <div class="mb-3">
+        <label for="description">description</label>
+        <textarea name="description" placeholder="enter description" class="form-control" rows="5" cols="20"><%=listing.description %></textarea>
+        </div>
+        <button class="btn-add btn" >edit</button>
+    </form>
+    </div>
+    </div>
+
+</body>

@@ -1,0 +1,88 @@
+<%-layout("/layouts/nav.ejs")%>
+<style>
+  .features{
+    height: 4rem;
+    width: 100%;
+    display:flex;
+    margin: 1rem 0 1rem 0;
+  }
+   .feature{
+    font-size: 1rem;
+    margin: 2rem 1rem 1.6rem 1rem;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  }
+  .aftertax-toggle{
+    margin-bottom: 3.3rem;
+  }
+  .GST{
+    display: none;
+  }
+</style>
+<body>
+     
+     <div class="row row-cols-lg-3 row-cols-md-2">
+      <div class="features" >
+        <div class="feature"><i class="fa-solid fa-fire"></i><div>Trending</div></div>
+          <div class="feature"><i class="fa-solid fa-person-swimming"></i><div>Swimmig</div></div>
+        <div class="feature"><i class="fa-solid fa-mountain-sun"></i><div>mountain</div></div>
+        <div class="feature"><i class="fa-solid fa-umbrella-beach"></i><div>beach</div></div>
+        <div class="feature"><i class="fa-solid fa-igloo"></i><div>igloo</div></div>
+        <div class="feature"><i class="fa-solid fa-hotel"></i><div>hotel</div></div>
+        <div class="feature"><i class="fa-solid fa-campground"></i><div>camping</div></div>
+        <div class="feature"><i class="fa-solid fa-ship"></i><div>boat</div></div>
+        <div class="feature"><i class="fa-solid fa-person-hiking"></i><div>hiking</div></div>
+        <div class="feature"><i class="fa-solid fa-snowflake"></i><div>snowflake</div></div>
+
+        <div class="feature ms-auto aftertax-toggle">
+        <div class="form-check form-switch form-check-reverse">
+         <input class="form-check-input" type="checkbox" id="switchCheckReverse">
+         <label class="form-check-label" for="switchCheckReverse"><i>After Tax</i></label>
+        </div>
+        </div>
+         
+      </div>
+
+
+   
+       
+    <% for(listing of allListings){ %>
+        <a href="/listings/<%=listing._id%>"class="listing-link">
+        <div class="card" >
+  <img src="<%=listing.image.url%>" class="card-img-top" style="height:20rem ;" alt="listing_image">
+  <div class="card-img-overlay"></div>
+  
+
+
+  
+  <div class="card-body">
+    <p class="card-text"><b><%=listing.title%></b>
+    <br>
+    &#8377;<%=listing.price.toLocaleString("en-IN") %>/night <i class="GST">&nbsp;+18% = <%= (1.18 * listing.price).toLocaleString("en-IN") %></i></p>
+  </div>
+</div>
+</a>
+<% } %>
+
+</div>
+<script>
+let taxSwitch = document.getElementById("switchCheckReverse");
+
+taxSwitch.addEventListener("click",()=>{
+  let GST = document.getElementsByClassName("GST");
+  for(info of GST){
+    if(info.style.display != "inline")
+    {
+      info.style.display = "inline";
+    }else{
+       info.style.display = "none";
+    }
+  }
+});
+</script>
+
+</body>
+
+

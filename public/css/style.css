@@ -1,0 +1,334 @@
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display:flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.container{
+  flex:1;
+}
+
+.navbar{
+    height:5rem;
+    background-color: white;
+}
+
+.fa-airbnb{
+    color:#fe424d;
+    font-size:2rem;
+}
+
+.nav-link{
+    color:#222222 !important ;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+    font-size: 1rem;
+   
+}
+.f-info-links{
+    width:100%;
+}
+.footer-info-social{
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.footer-info{
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+
+}
+
+.card{
+    border: none !important;
+    margin-bottom: 2rem;   
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover;
+}
+.card-body{
+    padding: 0 !important;
+}
+.listing-link{
+    text-decoration: none;
+}
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+
+    background-color: white;
+}
+
+.show-img{
+    height: 30vh;
+}
+
+.review-card{
+  border:0.5px solid black !important;
+  
+}
+/*-----------------------------------------------------------*/
+
+/* Default collapsed state */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+/* When the hamburger is clicked and the menu is open */
+.navbar .collapse.show {
+  /* margin-top: 10px !important;          /* Adds some height */
+  /* padding-bottom: 10px !important;     Adds extra spacing */
+  background-color: #fff !important; 
+  opacity: 0.8 !important;   /* Optional: match navbar bg */
+}
+
+/* Optional: Animate smoothly */
+.navbar .collapse {
+  transition: all 0.3s ease;
+}
+
+    .terms-hero {
+      background: linear-gradient(135deg, #00c9a7, #845ec2);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+      border-bottom: 8px solid #00a88f;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .terms-hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .terms-hero h1 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .terms-hero p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    /* ===== Terms Container ===== */
+    .terms-wrapper {
+      max-width: 950px;
+      background: #fff;
+      margin: 60px auto;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .terms-block {
+      margin-bottom: 45px;
+    }
+
+    .terms-block h2 {
+      color: #00a88f;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+      font-weight: 700;
+      border-left: 5px solid #845ec2;
+      padding-left: 10px;
+    }
+
+    .terms-block p,
+    .terms-block ul {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    .terms-block ul {
+      margin-left: 25px;
+      list-style: circle;
+    }
+
+    .terms-block a {
+      color: #845ec2;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .terms-block a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Footer ===== */
+    .terms-footer {
+      background: #845ec2;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      border-top: 8px solid #00a88f;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+    }
+
+    .terms-footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .terms-wrapper {
+        margin: 30px 15px;
+        padding: 30px 20px;
+      }
+
+      .terms-hero h1 {
+        font-size: 2rem;
+      }
+
+      .terms-block h2 {
+        font-size: 1.3rem;
+      }
+    }
+
+       .privacy-banner {
+      background: linear-gradient(120deg, #ff7e5f, #feb47b);
+      text-align: center;
+      padding: 70px 25px;
+      color: #fff;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .privacy-banner h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .privacy-banner p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    /* ===== Main Content ===== */
+    .policy-container {
+      max-width: 950px;
+      background: #ffffff;
+      margin: 60px auto;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .policy-section {
+      margin-bottom: 40px;
+    }
+
+    .policy-section h2 {
+      font-size: 1.6rem;
+      color: #ff7e5f;
+      margin-bottom: 10px;
+      border-left: 5px solid #feb47b;
+      padding-left: 12px;
+      font-weight: 700;
+    }
+
+    .policy-section p,
+    .policy-section ul {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #34495e;
+    }
+
+    .policy-section ul {
+      margin-left: 25px;
+      list-style: disc;
+    }
+
+    .policy-section a {
+      color: #ff7e5f;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .policy-section a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Footer Section ===== */
+    .policy-footer {
+      background: #feb47b;
+      text-align: center;
+      color: #fff;
+      padding: 25px;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+
+    .policy-footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .policy-container {
+        margin: 30px 15px;
+        padding: 30px 20px;
+      }
+
+      .privacy-banner h1 {
+        font-size: 2rem;
+      }
+
+      .policy-section h2 {
+        font-size: 1.3rem;
+      }
+    }
+
+    .pandc{
+      margin-right: 0;
+      margin-left: 0;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .btn-add{
+      background-color: #fe424d !important;
+      color:white !important;
+    }
+
+    /*--------------------   MAP STYLING---------------------*/
+
+    #map {
+    height: 400px !important;   /* required */
+    width: 100%;
+  }

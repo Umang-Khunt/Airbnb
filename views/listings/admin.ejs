@@ -1,0 +1,17 @@
+<%-layout("/layouts/nav.ejs")%>
+<body>
+     
+    <form method="GET" action="/listings/admin/new">
+        <button>Create new Listing</button>
+    </form>
+    <h3>All listings</h3>    
+    <ul>
+    <% for(listing of allListings){ %>
+    <li><a href="/listings/<%=listing._id%>"><%= listing.title %></a> <button onclick="window.location.href='http://localhost:8080/listings/admin/<%=listing._id%>/edit'" >edit</button>
+    <form method="POST" action="/listings/admin/<%=listing._id%>?_method=DELETE" ><button>delete</button></form></li>
+    </br>
+<% } %>
+</ul>
+</body>
+
+
