@@ -24,7 +24,7 @@
 
 
     <% if (currUser && currUser._id.equals(listing.owner._id)){ %>
-      <button onclick="window.location.href='http://localhost:8080/listings/<%=listing._id%>/edit'" class="btn btn-danger" >edit</button>
+      <button onclick="window.location.href='https://airbnb-clcz.onrender.com/<%=listing._id%>/edit'" class="btn btn-danger" >edit</button>
 
        <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE" ><button class="btn btn-dark mt-2">delete</button></form>
       <% } %>
