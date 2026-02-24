@@ -73,7 +73,7 @@ fetch(url)
     // ✅ SEND TO BACKEND AFTER lat/lon ARE READY
    
     console.log("after marker complete");
-       return fetch('http://localhost:8080/listings/coordinates', {
+       return fetch('https://airbnb-clcz.onrender.com/listings/coordinates', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
