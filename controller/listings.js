@@ -72,7 +72,7 @@ module.exports.editPageRander = async (req,res,next)=>{
 };
 
 
-//-----Listing Updare route
+//-----Listing Update route
 module.exports.listingUpdater = async (req,res,next)=>{
     let { id } = req.params;
     let{ title,image,price,location,country,description } = req.body;
@@ -85,6 +85,8 @@ module.exports.listingUpdater = async (req,res,next)=>{
         country:country,
         description:description
     }});
+
+    
 
     if(typeof req.file != "undefined"){
         let url = req.file.path;
